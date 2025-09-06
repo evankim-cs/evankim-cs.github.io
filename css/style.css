@@ -92,6 +92,7 @@ header img {
 /************* Sections ********************/
 section {
   padding-left: 1rem;   /* add space from the left edge */
+  margin-bottom: 2.5rem;
 }
 
 hr {
@@ -171,6 +172,12 @@ section a:hover {
   font-size: 0.95rem;
   color: #374151;
   line-height: 1.4;
+}
+
+.projects .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  transition: all 0.2s ease-in-out;
 }
 
 .three-col {
