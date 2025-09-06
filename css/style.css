@@ -90,6 +90,10 @@ header img {
 }
 
 /************* Sections ********************/
+section {
+  padding-left: 1rem;   /* add space from the left edge */
+}
+
 hr {
   border: none;
   height: 1px;
@@ -130,10 +134,49 @@ section a:hover {
 }
 
 /**************   Projects   *****************/
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columns on desktop */
+  gap: 1.5rem;  /* space between cards */
+  margin-top: 1.5rem;
+}
+
+.projects .card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.projects .card img {
+  width: 120px;       /* keep images neat */
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.projects .card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  color: #0b3d91;
+}
+
+.projects .card p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.4;
+}
+
 .three-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;                 /* space between cards */	
+  gap: 1rem;                 /* space between cards */
 }
 
 .card img {
@@ -152,7 +195,8 @@ section a:hover {
   box-shadow: 0 10px 18px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;  
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 /**************   Responsiveness   *****************/
@@ -168,6 +212,18 @@ section a:hover {
     max-width: 640px;
     margin: 0 auto;
     }
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr; /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
 }
 
 /**************   Contact Page   *****************/
@@ -196,4 +252,21 @@ textarea {
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   font: inherit;
+}
+
+/**************   Contact Form Button   *****************/
+button {
+  background-color: #1e3a8a; /* Dark blue */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2563eb; /* Lighter blue on hover */
 }
