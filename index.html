@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Evan Kim</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Evan Kim</title>
 </head>
 <body>
 
-  <!-- 1) NAV -->
+  <!-- NAV -->
   <nav>
     <p>Evan Kim</p>
-    <p><a href="contact.html">Contact Evan Kim</a></p>
+    <p><a href="contact.html">Contact Me</a></p>
   </nav>
 
-  <!-- 2) PROFILE INFO -->
-  <header>
+  <!-- HEADER / SPLASH -->
+  <header class="splash">
     <h1>Evan Kim</h1>
-    <img src="images/headshot.jpg" alt="Headshot of Evan Kim" width="150">
-    <p>Lawrenceville, GA &nbsp;&middot;&nbsp; 678-983-8155 &nbsp;&middot;&nbsp;
-        <a href="mailto:evan.kim095@gmail.com">evan.kim095@gmail.com</a>
+    <img src="images/headshot.jpg" alt="Headshot of Evan Kim">
+    <p class="address">
+      Lawrenceville, GA &nbsp;&middot;&nbsp; 678-983-8155 &nbsp;&middot;&nbsp;
+      <a href="mailto:evan.kim095@gmail.com">evan.kim095@gmail.com</a>
     </p>
-    <p>Computer Science student seeking full-stack / data-focused internships.</p>
-    </header>
+    <p class="tagline">Computer Science student seeking full-stack / data-focused internships.</p>
+  </header>
 
-  <!-- 3) RULE -->
   <hr>
 
-  <!-- 4) EDUCATION -->
+  <!-- EDUCATION -->
   <section>
     <h2>Education</h2>
     <dl>
@@ -45,16 +45,16 @@
     </dl>
   </section>
 
-  <!-- 5) HONORS AND AWARDS -->
+  <!-- HONORS -->
   <section>
     <h2>Honors and Awards</h2>
     <dl>
-      <dt>GSU President’s List</dt><dd>2022-2024</dd>
+      <dt>GSU President’s List</dt><dd>2022–2024</dd>
       <dt>GSU Dean's List</dt><dd>2024</dd>
     </dl>
   </section>
 
-  <!-- 6) SKILLS -->
+  <!-- SKILLS -->
   <section>
     <h2>Skills</h2>
     <ul>
@@ -69,7 +69,7 @@
     </ul>
   </section>
 
-  <!-- 7) LEADERSHIP AND EXPERIENCE -->
+  <!-- EXPERIENCE -->
   <section>
     <h2>Leadership and Experience</h2>
     <dl>
@@ -84,53 +84,59 @@
     </dl>
   </section>
 
-  <!-- 9) PROJECTS -->
+  <!-- PROJECTS -->
   <section class="projects">
     <h2>Projects</h2>
 
-    <div class="project-grid">
+    <!-- IMPORTANT for tests: use .three-col as grid container -->
+    <div class="three-col">
       <div class="card">
-      <h3>Java Calculator</h3>
-      <img src="images/java_calculator.png" alt="Screenshot of Java Calculator" width="150">
-      <ul>
-        <li>Built using Java</li>
-        <li>Implements basic arithmetic operations (add, subtract, multiply, divide)</li>
-        <li>Demonstrates event-driven programming and user interface design</li>
-      </ul>
-    </div>
+        <h3>Java Calculator</h3>
+        <img src="images/java_calculator.png" alt="Screenshot of Java Calculator">
+        <ul>
+          <li>Built using Java</li>
+          <li>Basic arithmetic operations (add, subtract, multiply, divide)</li>
+          <li>Event-driven programming and simple UI</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>Flappy Pomeranian</h3>
-      <img src="images/flappy_pomeranian.png" alt="Screenshot of Flappy Pomeranian" width="150">
-      <ul>
-        <li>Java-based clone of the classic Flappy Bird game with a custom Pomeranian character</li>
-        <li>Uses collision detection and score tracking</li>
-        <li>Strengthened understanding of game loops and object-oriented programming</li>
-      </ul>
-    </div>
+      <div class="card">
+        <h3>Flappy Pomeranian</h3>
+        <img src="images/flappy_pomeranian.png" alt="Screenshot of Flappy Pomeranian game">
+        <ul>
+          <li>Java-based Flappy Bird clone with custom character</li>
+          <li>Collision detection and score tracking</li>
+          <li>Practice in game loops & OOP</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>Cafe Menu</h3>
-      <img src="images/cafe_menu.png" alt="Screenshot of Cafe Menu" width="150">
-      <ul>
-        <li>Designed a responsive café menu using semantic HTML and CSS</li>
-        <li>Showcases layout techniques with lists, headings, and styled sections</li>
-        <li>Demonstrates ability to structure and style static web pages cleanly</li>
-      </ul>
+      <div class="card">
+        <h3>Cafe Menu</h3>
+        <img src="images/cafe_menu.png" alt="Screenshot of Cafe Menu project">
+        <ul>
+          <li>Responsive café menu using semantic HTML & CSS</li>
+          <li>Clean layout with lists, headings, sections</li>
+          <li>Practice structuring and styling static pages</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 10) FOOTER -->
-  <footer>
-    <p>
-      &copy; <a href="contact.html">Evan Kim</a>
-      &nbsp;|&nbsp;
-      <a href="https://www.linkedin.com/in/evankim-cs" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-    </p>
-  </footer>
+  <!-- FOOTER -->
+<footer>
+  <p>
+    &copy; <a href="contact.html">Evan Kim</a>
+    &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/evankim-cs" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+      <!-- Inline LinkedIn SVG (fills with current text color) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+      viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+      style="vertical-align: -3px;">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.329-.027-3.041-1.852-3.041-1.853 0-2.136 1.447-2.136 2.943v5.667H9.352V9.5h3.414v1.492h.047c.476-.901 1.637-1.852 3.37-1.852 3.603 0 4.268 2.371 4.268 5.455v5.857zM5.337 8.008a2.066 2.066 0 1 1 0-4.132 2.066 2.066 0 0 1 0 4.132zM6.999 20.452H3.67V9.5h3.329v10.952zM22.225 0H1.771C.792 0 0 .774 0 1.73v20.541C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.73C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    </a>
+  </p>
+</footer>
 
 </body>
 </html>
