@@ -146,6 +146,7 @@ section a:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
 
+
 .projects .card img {
   transition: transform 0.3s ease;
   border-radius: 6px;
