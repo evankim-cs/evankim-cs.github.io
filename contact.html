@@ -60,5 +60,21 @@
   </p>
 </footer>
 
+  <script>
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();       // prevent sending
+        form.reportValidity();    // show built-in pop-ups
+        return;
+      }
+
+      // Demo: prevent actual submit (remove if you add backend)
+      e.preventDefault();
+      alert('Thanks! Your message is ready to send (demo only).');
+    });
+  </script>
+
 </body>
 </html>
