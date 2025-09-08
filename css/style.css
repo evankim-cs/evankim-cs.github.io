@@ -16,9 +16,13 @@ nav {
   /* flex parent; name left, contact right */
   display: flex;
   align-items: center;
-  justify-content: space-between; /* separates left/right */
+  justify-content: space-between;
   gap: 1rem;
   padding: 0.75rem 1rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
@@ -115,8 +119,16 @@ section dl {
   align-items: start;
   margin: 0.25rem 0 0;  
 }
-section dt { font-weight: 700; color: #111827; }
-section dd { margin: 0; color: #374151; }
+
+section dt { 
+  font-weight: 700; 
+  color: #111827;
+}
+
+section dd { 
+  margin: 0; 
+  color: #374151;
+}
 
 section ul {
   list-style: square;
@@ -125,7 +137,7 @@ section ul {
 }
 
 section a {
-  color: #0b3d91;          /* brand blue */
+  color: #0b3d91;
   text-decoration: none;   /* remove underline */
 }
 
