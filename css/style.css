@@ -298,15 +298,17 @@ button:hover { background-color: #2563eb; }
 
 /* Mobile Responsive */
 @media (max-width: 680px) {
-  /* Nav: stack + center */
   nav {
-    flex-direction: column;
+    flex-direction: row;            /* stay in one row */
+    justify-content: space-between; /* name left, link right */
     align-items: center;
-    text-align: center;
-    gap: 0.25rem;
-    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;        /* tighter bar */
+    border-bottom-width: 2px;       /* slimmer line */
   }
-
+  nav p { margin: 0; }              /* remove extra line-height space */
+  nav a { font-size: 0.95rem; }     /* slightly smaller link text */
+}
   /* Hero: shorter, tighter spacing */
   header.splash {
     padding: 1.75rem 1rem;
