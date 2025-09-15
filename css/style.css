@@ -245,17 +245,22 @@ section a:hover {
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
   nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;            /* stay in one row */
+    justify-content: space-between; /* name left, link right */
+    align-items: center;
     gap: 0.5rem;
+    padding: 0.4rem 0.75rem;        /* tighter bar */
+    border-bottom-width: 2px;       /* slimmer line */
   }
+  nav p { margin: 0; }              /* remove extra line-height space */
+  nav a { font-size: 0.95rem; }     /* slightly smaller link text */
+}
 
   .three-col {
     grid-template-columns: 1fr;
     max-width: 640px;
     margin: 0 auto;
   }
-}
 
 /**************   Contact Page   *****************/
 .one-col {
@@ -280,6 +285,14 @@ textarea {
   resize: vertical;
 }
 
+.one-col textarea {
+  resize: both;        /* was: vertical */
+  max-width: 100%;     /* stay inside the card */
+  min-width: 260px;    /* optional floor; tweak as you like */
+  overflow: auto;      /* show scrollbars if content exceeds box */
+}
+
+
 /**************   Contact Form Button   *****************/
 button {
   background-color: #1e3a8a;
@@ -298,32 +311,6 @@ button:hover { background-color: #2563eb; }
   box-sizing: border-box;
 }
 
-.one-col textarea {
-  resize: both;        /* was: vertical */
-  max-width: 100%;     /* stay inside the card */
-  min-width: 260px;    /* optional floor; tweak as you like */
-  overflow: auto;      /* show scrollbars if content exceeds box */
-}
-
 .one-col form button {
   margin-top: 0.75rem;   /* bump this to 1rem if you want more */
 }
-
-/* Ensure the contact card doesn't hide the resize handle/content */
-.one-col { overflow: visible; }
-
-/* Mobile Responsive */
-@media (max-width: 680px) {
-  nav {
-    flex-direction: row;            /* stay in one row */
-    justify-content: space-between; /* name left, link right */
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 0.75rem;        /* tighter bar */
-    border-bottom-width: 2px;       /* slimmer line */
-  }
-  nav p { margin: 0; }              /* remove extra line-height space */
-  nav a { font-size: 0.95rem; }     /* slightly smaller link text */
-}
-
-.one-col form { display: grid; gap: 0.75rem; }
