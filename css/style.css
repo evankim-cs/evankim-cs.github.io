@@ -64,7 +64,7 @@ header.splash {
   place-items: center;
   row-gap: 1rem;
   align-content: center;   /* centers the whole stack vertically */
-  min-height: 380px;  
+  min-height: 470px;
 }
 
 header.splash h1 {
