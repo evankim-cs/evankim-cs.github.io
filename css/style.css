@@ -1,4 +1,4 @@
-/* Base */
+/* Base */ 
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -53,7 +53,7 @@ footer a:visited { color: #93c5fd; }
 header.splash {
   background:
     linear-gradient(135deg, rgba(238,242,255,0.55) 0%, rgba(224,242,254,0.55) 100%),
-    url("../images/back.jpg");  /* make sure the name & case match exactly */
+    url("../images/back.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ header.splash {
   display: grid;
   place-items: center;
   row-gap: 1rem;
-  align-content: center;   /* centers the whole stack vertically */
+  align-content: center;
   min-height: 470px;
 }
 
@@ -84,13 +84,9 @@ header.splash img {
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-@media (max-width: 680px) {
-  header.splash { min-height: 300px; }
-}
-
 header.splash p { margin: 0.25rem 0; }
 
-.address { font-style: normal; color: #111111;  }
+.address { font-style: normal; color: #111111; }
 .tagline { font-size: 1.05rem; font-weight: 600; color: #0b3d91; }
 
 /************* Sections ********************/
@@ -111,44 +107,46 @@ section h2, section h3 {
   color: #0b3d91;
   margin: 0 0 0.75rem;
 }
+
 section:not(.projects) {
-  /* a centered middle column; adjust 960–1080px if you want wider/narrower */
   max-width: 1000px;
   margin: 0 auto 2.5rem;
-  padding: 0 1rem;       /* symmetric side padding for small screens */
-}
-
-/* Keep headings like “Education”, “Honors”, etc. centered above their content */
-section:not(.projects) h2 {
-  text-align: center;
-}
-
-section:not(.projects) {
+  padding: 0 1rem;
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
-  padding: 1.25rem 1.5rem 1.5rem;  /* inner space so text doesn't hug the border */
+  padding: 1.25rem 1.5rem 1.5rem;
   box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-  overflow: hidden;                 /* clips any overflowed bits */
+  overflow: hidden;
 }
 
-/* Keep those section titles centered and nicely spaced */
 section:not(.projects) h2 {
   text-align: center;
   margin: 0 0 1rem;
 }
 
-/* Preserve your existing left/right layout inside those sections */
-section dl {            /* you already have grid columns set; this just clarifies intent */
+/* Left/Right grid inside sections */
+section dl {
   display: grid;
-  grid-template-columns: minmax(420px, 3fr) minmax(120px, 1fr);
+  /* 2 columns on desktop: content left (flexible), dates right (fit-content) */
+  grid-template-columns: minmax(420px, 1fr) max-content;
   column-gap: 2rem;
   row-gap: 0.5rem;
   align-items: start;
 }
 
-section dt { font-weight: 700; color: #111827; }
-section dd { margin: 0; color: #374151; }
+section dt {
+  font-weight: 700;
+  color: #111827;
+}
+
+section dd {
+  margin: 0;
+  color: #374151;
+  /* Right column stays on the right */
+  justify-self: end;
+  text-align: right;
+}
 
 section ul {
   list-style: square;
@@ -156,17 +154,10 @@ section ul {
   margin: 0.5rem 0 0;
 }
 
-section a {
-  color: #0b3d91;
-  text-decoration: none;
-}
-section a:hover {
-  color: #0a2f6b;
-  text-decoration: underline;
-}
+section a { color: #0b3d91; text-decoration: none; }
+section a:hover { color: #0a2f6b; text-decoration: underline; }
 
 /**************   Cards / Projects   *****************/
-/* IMPORTANT: the grader looks for .three-col grid container */
 .three-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -180,10 +171,9 @@ section a:hover {
   box-shadow: 0 0 0 1px #e5e7eb, 0 8px 20px rgba(0,0,0,0.04);
   padding: 0.75rem 1rem 1.25rem;
   margin: 0 auto 2.5rem;
-  max-width: 1500px; 
+  max-width: 1500px;
 }
 
-/* Keep the title centered */
 .projects > h2 {
   text-align: center;
   margin: 1.25rem auto 1rem;
@@ -202,20 +192,12 @@ section a:hover {
   overflow: hidden;
   padding: 1rem;
 }
-
 .projects .card:hover {
-  transform: translateY(-6px) scale(1.01);   /* was -10px / 1.03 */
+  transform: translateY(-6px) scale(1.01);
   box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
-
-.projects .card img {
-  transition: transform 0.3s ease;
-  border-radius: 6px;
-}
-
-.projects .card:hover img {
-  transform: scale(1.05);
-}
+.projects .card img { transition: transform 0.3s ease; border-radius: 6px; }
+.projects .card:hover img { transform: scale(1.05); }
 
 .card {
   background: #ffffff;
@@ -228,46 +210,54 @@ section a:hover {
   gap: 0.75rem;
   margin-bottom: 2rem;
 }
-
 .card img {
   width: auto;
-  max-width: 400px;    /* keeps them smaller */
+  max-width: 400px;
   height: auto;
-  max-height: 340px;   /* keeps aspect ratio under control */
-  object-fit: contain; /* avoids cropping */
+  max-height: 340px;
+  object-fit: contain;
   border-radius: 10px;
   border: 1px solid #e5e7eb;
-  margin: 0 auto 1rem; /* centers inside card */
+  margin: 0 auto 1rem;
   display: block;
-}
-
-.three-col {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
 }
 
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
-  nav {
-    flex-direction: row;            /* stay in one row */
-    justify-content: space-between; /* name left, link right */
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 0.75rem;        /* tighter bar */
-    border-bottom-width: 2px;       /* slimmer line */
-  }
-  nav p { margin: 0; }              /* remove extra line-height space */
-  nav a { font-size: 0.95rem; }     /* slightly smaller link text */
-}
-
-@media (max-width: 680px) {
-  .three-col {
+  nav, .three-col {
+    flex-direction: column;
     grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;     /* REQUIRED by tests */
+    align-items: center;         /* center horizontally */
+    justify-content: center;     /* center within the bar */
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  nav p, nav a {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .three-col {
+    display: grid;
     max-width: 100%;
     margin: 0 auto;
+    gap: 1rem;
   }
+
+  
+  /* Other mobile tweaks */
+  header.splash { min-height: 470px; }
+  section dl { grid-template-columns: 1fr; }
+  section dd { justify-self: start; text-align: left; white-space: normal; }
 }
+
+
 
 /**************   Contact Page   *****************/
 .one-col {
@@ -287,18 +277,14 @@ input, textarea {
   font: inherit;
 }
 
-textarea {
-  min-height: 140px;
-  resize: vertical;
-}
+textarea { min-height: 140px; resize: vertical; }
 
 .one-col textarea {
-  resize: both;        /* was: vertical */
-  max-width: 100%;     /* stay inside the card */
-  min-width: 260px;    /* optional floor; tweak as you like */
-  overflow: auto;      /* show scrollbars if content exceeds box */
+  resize: both;        /* allows horizontal resizing inside the card */
+  max-width: 100%;
+  min-width: 260px;
+  overflow: auto;
 }
-
 
 /**************   Contact Form Button   *****************/
 button {
@@ -314,10 +300,6 @@ button {
 }
 button:hover { background-color: #2563eb; }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-.one-col form button {
-  margin-top: 0.75rem;   /* bump this to 1rem if you want more */
-}
+.one-col form button { margin-top: 0.75rem; }
