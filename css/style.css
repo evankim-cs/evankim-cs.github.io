@@ -266,14 +266,7 @@ section a:hover {
   grid-template-columns: 1fr; /* REQUIRED by the test */
   gap: 1rem;
 }
-.one-col textarea {
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;   /* prevents horizontal shrinking */
-  min-height: 140px;
-  resize: vertical;  /* vertical only */
-  overflow: auto;
-}
+
 input, textarea {
   width: 100%;
   padding: 0.75rem 0.9rem;
@@ -306,10 +299,14 @@ button:hover { background-color: #2563eb; }
 }
 
 .one-col textarea {
-  resize: both;
-  max-width: 100%;
-  min-width: 260px;
-  overflow: auto;
+  resize: both;        /* was: vertical */
+  max-width: 100%;     /* stay inside the card */
+  min-width: 260px;    /* optional floor; tweak as you like */
+  overflow: auto;      /* show scrollbars if content exceeds box */
+}
+
+.one-col form button {
+  margin-top: 0.75rem;   /* bump this to 1rem if you want more */
 }
 
 /* Ensure the contact card doesn't hide the resize handle/content */
@@ -328,3 +325,5 @@ button:hover { background-color: #2563eb; }
   nav p { margin: 0; }              /* remove extra line-height space */
   nav a { font-size: 0.95rem; }     /* slightly smaller link text */
 }
+
+.one-col form { display: grid; gap: 0.75rem; }
