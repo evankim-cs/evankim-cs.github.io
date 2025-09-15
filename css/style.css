@@ -241,6 +241,11 @@ section a:hover {
   display: block;
 }
 
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
 
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
@@ -256,11 +261,13 @@ section a:hover {
   nav a { font-size: 0.95rem; }     /* slightly smaller link text */
 }
 
+@media (max-width: 680px) {
   .three-col {
     grid-template-columns: 1fr;
-    max-width: 640px;
+    max-width: 100%;
     margin: 0 auto;
   }
+}
 
 /**************   Contact Page   *****************/
 .one-col {
