@@ -51,12 +51,20 @@ footer a:visited { color: #93c5fd; }
 
 /*********** Splash / Header ************************/
 header.splash {
-  background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+  background:
+    linear-gradient(135deg, rgba(238,242,255,0.55) 0%, rgba(224,242,254,0.55) 100%),
+    url("../images/back.jpg");  /* make sure the name & case match exactly */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   padding: 3rem 1rem;
   text-align: center;
   display: grid;
   place-items: center;
   row-gap: 1rem;
+  align-content: center;   /* centers the whole stack vertically */
+  min-height: 380px;  
 }
 
 header.splash h1 {
@@ -76,7 +84,13 @@ header.splash img {
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-.address { font-style: normal; color: #475569; }
+@media (max-width: 680px) {
+  header.splash { min-height: 300px; }
+}
+
+header.splash p { margin: 0.25rem 0; }
+
+.address { font-style: normal; color: #111111;  }
 .tagline { font-size: 1.05rem; font-weight: 600; color: #0b3d91; }
 
 /************* Sections ********************/
@@ -97,13 +111,40 @@ section h2, section h3 {
   color: #0b3d91;
   margin: 0 0 0.75rem;
 }
+section:not(.projects) {
+  /* a centered middle column; adjust 960–1080px if you want wider/narrower */
+  max-width: 1000px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;       /* symmetric side padding for small screens */
+}
 
-section dl {
+/* Keep headings like “Education”, “Honors”, etc. centered above their content */
+section:not(.projects) h2 {
+  text-align: center;
+}
+
+section:not(.projects) {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem 1.5rem;  /* inner space so text doesn't hug the border */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  overflow: hidden;                 /* clips any overflowed bits */
+}
+
+/* Keep those section titles centered and nicely spaced */
+section:not(.projects) h2 {
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+/* Preserve your existing left/right layout inside those sections */
+section dl {            /* you already have grid columns set; this just clarifies intent */
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 0.5rem 1rem;
+  grid-template-columns: minmax(420px, 3fr) minmax(120px, 1fr);
+  column-gap: 2rem;
+  row-gap: 0.5rem;
   align-items: start;
-  margin: 0.25rem 0 0;
 }
 
 section dt { font-weight: 700; color: #111827; }
@@ -130,6 +171,27 @@ section a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+
+.projects {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px #e5e7eb, 0 8px 20px rgba(0,0,0,0.04);
+  padding: 0.75rem 1rem 1.25rem;
+  margin: 0 auto 2.5rem;
+  max-width: 1500px; 
+}
+
+/* Keep the title centered */
+.projects > h2 {
+  text-align: center;
+  margin: 1.25rem auto 1rem;
+}
+
+.projects .card h3 {
+  text-align: center;
+  margin: 0 0 0.75rem;
 }
 
 .projects .card {
@@ -231,3 +293,75 @@ button {
   transition: background-color 0.2s ease;
 }
 button:hover { background-color: #2563eb; }
+
+
+
+/* Mobile Responsive */
+@media (max-width: 680px) {
+  /* Nav: stack + center */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Hero: shorter, tighter spacing */
+  header.splash {
+    padding: 1.75rem 1rem;
+    min-height: 260px;
+    row-gap: 0.5rem;
+    background-position: center;
+  }
+  header.splash img { width: 120px; height: 120px; border-width: 3px; }
+  .address, .tagline { font-size: 0.95rem; }
+
+  /* Section cards centered, with lighter padding */
+  section:not(.projects) {
+    margin: 0 0 1.5rem;
+    padding: 0.75rem 0.9rem 1rem;
+    border-radius: 12px;
+  }
+  section h2 { margin: 0 0 0.75rem; }
+
+  /* DL becomes single column; dates align left under title */
+  section dl {
+    grid-template-columns: 1fr;
+    row-gap: 0.25rem;
+  }
+  section dd {
+    justify-self: start;
+    text-align: left;
+    white-space: normal;
+  }
+
+  /* Lists: a little less indent */
+  section ul { padding-left: 1rem; }
+
+  /* Projects: same 3 cards, but one per row + gentle container width */
+  .projects {
+    max-width: 100%;
+    margin: 0 0 2rem;
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+  .projects > h2 { margin: 0.75rem auto 0.75rem; }
+  .three-col {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .card { padding: 0.75rem; border-radius: 12px; }
+  .card img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 220px;
+    height: auto;
+  }
+
+  /* Contact form: comfy spacing + full-width button */
+  .one-col { margin: 1.5rem auto; padding: 0 1rem; }
+  button { width: 100%; }
+}
