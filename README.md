@@ -1,48 +1,71 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/NOFSrM7b)
-# CSS Resume Assignment
+# 🌐 Evan Kim – Portfolio Website
 
-In this assignment, you will style a resume website using CSS. 
+This is my personal portfolio website showcasing my background, technical skills, and projects as a Computer Science student at the University of Georgia.
+
+## 🚀 About Me
+
+I am a Computer Science student at the University of Georgia with a strong focus on backend development and data-driven applications. 
+I have experience building APIs, working with databases, and developing scalable solutions using Python, FastAPI, and SQL.
+
+I am currently seeking opportunities in:
+- Software Engineering (Backend / Full-Stack)
+- Data Analyst / Data Engineer roles
 
 ---
 
-## Provided Files
+## 🛠️ Tech Stack
 
-- `style.css`: a template css file linked in index.html and contact.html 
-- `index.html`: a template shell with css file linked
-- `contact.html`: a template shell with css file linked
+**Languages:**
+- Python, Java, C, JavaScript
+
+**Web & Backend:**
+- HTML, CSS, REST APIs, FastAPI
+
+**Data & Analytics:**
+- SQL, Power BI, Excel, Power Pivot
+
+**Tools:**
+- Git, GitHub
 
 ---
-## Part 1: Project Setup
 
-- Copy the contents of your completed `index.html` from the html assignment into the provided `index.html` template. (Keep the link to style.css.)
-- Copy the contents of your completed `contact.html` from the html assignment into the provided `contact.html` template file. (Keep the link to style.css.)
-- Copy the images from your completed html project to the images folder
+## 📂 Features
 
-## Part 2: Create!
+- Clean, responsive portfolio built with HTML and CSS
+- Structured sections highlighting Education, Technical Skills, and Professional Experience
+- Showcases backend development and data-focused experience
+- Optimized for recruiter-friendly navigation and quick scanning
+- Designed to clearly present projects, APIs, and technical capabilities
 
-Style your cv following these [step-by-step instructions](https://docs.google.com/document/d/1_Zpam8eycWh1wazH-_V9HGNCaHtEF6mf9KnPqqevdew/edit?usp=sharing). (20 pts)
+---
 
-### Part 3: Testing locally
+## 🔗 Live Website
 
-After you have completed the style.css file.  You may run the test scripts locally by:
+👉 https://evankim-cs.github.io/
 
-1. Install the tools by running:
+---
 
-   `npm install`
+## 📁 Project Structure
 
-2. Run the test scripts:
-   
-   `npm test`
+---
 
-3. Repeat `npm test` until all tests are passed.
+## 📈 Future Improvements
 
-### 🧭 Part 4: Publish your cv on your personal GitHub pages
+- Add project showcase section with detailed descriptions
+- Improve UI/UX with modern styling and animations
+- Add dark mode
 
-1. **Publish your CV on GitHub pages **
+---
 
-You are to publish your CV to your own GitHub pages site. This is **NOT** your classroom repo created in our CSCI4300-Web-Programming organization. [instructions](https://docs.google.com/document/d/1_Zpam8eycWh1wazH-_V9HGNCaHtEF6mf9KnPqqevdew/edit?usp=sharing) for publishing on GitHub are linked.
+## 📬 Contact
 
-2. **Provide the link on the class Google sheet** 
+- 📧 Email: evan.kim095@gmail.com
+- 📍 Location: Atlanta, GA
+- 💼 GitHub: https://github.com/evankim-cs
+- 🔗 LinkedIn: https://www.linkedin.com/in/evankim-cs/
 
-The link to the Google sheet is provided in the instructions sheet linked above.
+---
 
+## ⭐ About This Project
+
+This portfolio was built to showcase my growth as a developer and to document my journey into software engineering and data-focused roles.
