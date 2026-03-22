@@ -45,18 +45,6 @@ I am currently seeking opportunities in:
 
 ---
 
-## 📁 Project Structure
-
----
-
-## 📈 Future Improvements
-
-- Add project showcase section with detailed descriptions
-- Improve UI/UX with modern styling and animations
-- Add dark mode
-
----
-
 ## 📬 Contact
 
 - 📧 Email: evan.kim095@gmail.com
@@ -65,7 +53,3 @@ I am currently seeking opportunities in:
 - 🔗 LinkedIn: https://www.linkedin.com/in/evankim-cs/
 
 ---
-
-## ⭐ About This Project
-
-This portfolio was built to showcase my growth as a developer and to document my journey into software engineering and data-focused roles.
