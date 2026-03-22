@@ -7,6 +7,40 @@ body {
   background: #fafafa;
 }
 
+.experience-item {
+  margin-bottom: 1.8rem;
+}
+
+/* Top row (Company / Location) */
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+/* Second row (Role / Date) */
+.row.sub {
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+/* Left / Right alignment */
+.left {
+  color: #1e3a8a;
+}
+
+.right {
+  color: #6b7280;
+}
+
+/* Bullet spacing */
+.experience-item ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
 /****************   Nav Section **********************/
 nav {
   background: #0f172a;
